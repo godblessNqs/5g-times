@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5G Times</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">5G Times</div>
+        <nav>
+            <a href="#" id="category-home" onclick="loadNews('Home')">Home</a>
+            <a href="#" id="category-politics" onclick="loadNews('Politics')">Politics</a>
+            <a href="#" id="category-technology" onclick="loadNews('Technology')">Technology</a>
+            <a href="#" id="category-sports" onclick="loadNews('Sports')">Sports</a>
+            <a href="#" id="category-culture" onclick="loadNews('Culture')">Culture</a>
+        </nav>
+        
+        <div class="auth-buttons" id="auth-buttons">
+            <button onclick="showRegisterForm()">Register</button>
+            <button onclick="showLoginForm()">Login</button>
+        </div>
+        <button id="logout-button" onclick="logout()" style="display: none;">Logout</button>
+    </header>
+
+    <div class="modal" id="register-modal">
+        <div class="modal-content">
+            <h2>Register</h2>
+            <input type="text" id="register-username" placeholder="Username" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button onclick="register()">Register</button>
+            <button onclick="closeModal('register-modal')">Cancel</button>
+        </div>
+    </div>
+    
+
+    <!-- Login Form -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <button onclick="closeModal('login-modal')">Cancel</button>
+        </div>
+    </div>
+    
+    
+
+    <!-- Body Section for News -->
+    <main>
+        <div id="news-container">
+            <!-- Новости будут динамически добавляться сюда -->
+        </div>        
+    </main>
+
+    <!-- Footer
+    <footer>
+    <p>2024 5G Times. All rights reserved.</p>
+    </footer> -->
+
+
+    <script src="script.js"></script>
+</body>
+</html>

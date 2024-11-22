@@ -1,0 +1,256 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #1f2937;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    color: #6ee7b7;
+}
+
+header .auth-buttons button,
+header #logout-button {
+    background-color: #6ee7b7;
+    border: none;
+    color: #1f2937;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header .auth-buttons button:hover,
+header #logout-button:hover {
+    background-color: #34d399;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 300px;
+    margin: 15% auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.modal-content input,
+.modal-content button {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    background-color: #6ee7b7;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #34d399;
+}
+
+/* News Grid */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-item h2 {
+    font-size: 18px;
+    margin: 10px;
+    color: #1f2937;
+}
+
+.news-item p {
+    font-size: 14px;
+    margin: 10px;
+    color: #555;
+}
+
+.news-item p:last-child {
+    font-size: 12px;
+    font-style: italic;
+    color: #999;
+}
+
+/* Form Styling */
+#news-form {
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#news-form input,
+#news-form textarea,
+#news-form button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#news-form button {
+    background-color: #6ee7b7;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#news-form button:hover {
+    background-color: #34d399;
+}
+
+/* Comment Section Styles */
+.comments-section {
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.comments-section h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.comments-list {
+    margin: 10px 0;
+    padding: 0;
+    max-height: 100px; /* Ограничение по высоте */
+    overflow-y: auto; /* Вертикальная прокрутка */
+}
+
+.comments-list .comment {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.comments-list .comment strong {
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.comments-list .comment:last-child {
+    margin-bottom: 0;
+}
+
+textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none; /* Запрет на изменение размера */
+    font-size: 14px;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #6ee7b7;
+    box-shadow: 0 0 5px rgba(110, 231, 183, 0.5);
+}
+
+.comments-section button {
+    background-color: #6ee7b7;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.comments-section button:hover {
+    background-color: #34d399;
+}
+
+.comments-section p {
+    font-size: 14px;
+    color: #9ca3af;
+    text-align: center;
+    margin-top: 15px;
+    font-style: italic;
+}
